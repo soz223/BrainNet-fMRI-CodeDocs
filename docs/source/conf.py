@@ -5,7 +5,6 @@
 
 # -- Project information -----------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
-import sphinx_rtd_theme
 
 project = 'BrainNet-fMRI-CodeDocs'
 copyright = '2025, Songlin'
@@ -24,5 +23,6 @@ exclude_patterns = []
 # -- Options for HTML output -------------------------------------------------
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
 
+import sphinx_rtd_theme
 html_theme = 'sphinx_rtd_theme'
 html_static_path = ['_static']
