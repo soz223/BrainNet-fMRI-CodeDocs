@@ -1,9 +1,9 @@
-.. BrainNet-fMRI-CodeDocs documentation master file
+.. BrainNet-fMRI-CodeDocs master file
 
 Welcome to BrainNet-fMRI-CodeDocs!
 ==================================
 
-This documentation shows how to use the `brainnet-graph` package for constructing and analyzing fMRI-derived brain graphs.
+A toolkit for constructing and analyzing brain graphs from ROI-level fMRI signals.
 
 Contents
 --------
@@ -18,7 +18,7 @@ Contents
    methods
 
 .. toctree::
-   :maxdepth: 1
+   :maxdepth: 2
    :caption: 🧠 Advanced Topics
 
    visualization
@@ -27,7 +27,7 @@ Contents
 
 .. toctree::
    :maxdepth: 1
-   :caption: 📚 API / CLI Reference
+   :caption: 🧪 CLI & Reference
 
    cli_reference
    file_formats
