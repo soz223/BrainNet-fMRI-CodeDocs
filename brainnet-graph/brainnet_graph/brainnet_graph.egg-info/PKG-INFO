@@ -1,0 +1,16 @@
+Metadata-Version: 2.1
+Name: brainnet-graph
+Version: 0.1.0
+Summary: Graph construction from fMRI ROI time series
+Author: songlinzhao
+Requires-Dist: numpy
+Requires-Dist: pandas
+Requires-Dist: torch
+Requires-Dist: torch-geometric
+Requires-Dist: scikit-learn
+Requires-Dist: tqdm
+Requires-Dist: pingouin
+Requires-Dist: seaborn
+Requires-Dist: matplotlib
+Requires-Dist: statsmodels
+Requires-Dist: joblib
