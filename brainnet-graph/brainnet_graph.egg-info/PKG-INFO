@@ -1,6 +1,6 @@
 Metadata-Version: 2.4
 Name: brainnet-graph
-Version: 0.1.1
+Version: 0.2.2
 Summary: Graph construction from BOLD signal time series
 Home-page: https://github.com/yourname/brainnet-graph
 Author: Songlin Zhao
@@ -26,7 +26,6 @@ Dynamic: home-page
 Dynamic: requires-dist
 Dynamic: requires-python
 Dynamic: summary
-
 
 # 🧠 brainnet-graph
 
@@ -80,17 +79,38 @@ We construct an undirected, weighted graph \( G = (V, E, W) \) such that:
 
 ---
 
+## 🚀 Quick Start
+
 ## 🧪 Methods Supported
 
-| Method                  | Description                                     |
-| ----------------------- | ----------------------------------------------- |
-| `pearson_correlation` | Classic Pearson correlation:\(\rho(X_i, X_j)\)  |
-| `partial_correlation` | Partial out shared variance with others         |
-| `cosine_similarity`   | Cosine of the angle between time series vectors |
+The following methods are supported to construct brain connectivity graphs from time-series data:
+
+| Method                                           | Description                                                           |
+| ------------------------------------------------ | --------------------------------------------------------------------- |
+| `pearson_correlation`                          | Classic Pearson correlation: linear association\(\rho(X_i, X_j)\)     |
+| `spearman_correlation`                         | Rank-based Spearman correlation                                       |
+| `kendall_correlation`                          | Kendall’s tau correlation for ordinal association                    |
+| `partial_correlation`                          | Removes the effect of other ROIs using inverse covariance             |
+| `cosine_similarity`                            | Measures angular similarity between ROI vectors                       |
+| `correlations_correlation`                     | Second-order correlation: similarity between ROI correlation profiles |
+| `associated_high_order_fc`                     | High-order FC using correlation of correlation vectors                |
+| `euclidean_distance`                           | Distance-based connectivity (low = more similar)                      |
+| `knn_graph`                                    | Builds graph using k-nearest neighbors (non-correlation)              |
+| `mutual_information`                           | Nonlinear dependency estimation via mutual information                |
+| `cross_correlation`                            | Temporal lagged correlation                                           |
+| `granger_causality`                            | Temporal causal inference using Granger's test                        |
+| `generalised_synchronisation_matrix`           | Dynamical systems synchrony —**very slow**                     |
+| `patels_conditional_dependence_measures_kappa` | Conditional dependence metric (Patel’s\(\kappa\))                    |
+| `patels_conditional_dependence_measures_tau`   | Conditional dependence metric (Patel’s\(\tau\))                      |
+| `lingam`                                       | Causal inference using LiNGAM model —**very slow**             |
+
+📌 **Note**:
+
+- Some methods like `lingam` and `generalised_synchronisation_matrix` are computationally intensive.
+- All methods return a connectivity matrix which is then converted to a PyTorch Geometric graph object or edge list CSV.
+- You can plug in your own method via code if desired (ask in GitHub Issues and we’ll help).
 
 ---
-
-## 🚀 Quick Start
 
 ### 🛠️ From CLI
 

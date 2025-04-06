@@ -4,17 +4,31 @@ import pandas as pd
 import torch
 import numpy as np
 from torch_geometric.data import Data
-from .methods import (
-    pearson_correlation,
-    cosine_similarity,
-    partial_correlation,
-    correlation_matrix_to_graph_data,
-)
+from .methods import *
+# from .methods import (
+#     pearson_correlation,
+#     cosine_similarity,
+#     partial_correlation,
+#     correlation_matrix_to_graph_data,
+# )
 
 SUPPORTED_METHODS = {
     "pearson_correlation": pearson_correlation,
     "cosine_similarity": cosine_similarity,
     "partial_correlation": partial_correlation,
+    "correlations_correlation": correlations_correlation,
+    "associated_high_order_fc": associated_high_order_fc,
+    "euclidean_distance": euclidean_distance,
+    "knn_graph": knn_graph,
+    "spearman_correlation": spearman_correlation,
+    "kendall_correlation": kendall_correlation,
+    "mutual_information": mutual_information,
+    "cross_correlation": cross_correlation,
+    "granger_causality": granger_causality,
+    "generalised_synchronisation_matrix": generalised_synchronisation_matrix, # very slow
+    "patels_conditional_dependence_measures_kappa": patels_conditional_dependence_measures_kappa,
+    "patels_conditional_dependence_measures_tau": patels_conditional_dependence_measures_tau,
+    "lingam": lingam, # very slow
 }
 
 def load_data(input_path: str) -> pd.DataFrame:

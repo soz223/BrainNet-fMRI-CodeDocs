@@ -2,7 +2,8 @@ from setuptools import setup, find_packages
 
 setup(
     name='brainnet-graph',
-    version='0.1.1',
+    # version='0.1.1',
+    version='0.2.2',
     description='Graph construction from BOLD signal time series',
     long_description=open("README.md", encoding="utf-8").read(),
     long_description_content_type="text/markdown",
