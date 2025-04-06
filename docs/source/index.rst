@@ -1,38 +1,33 @@
-.. brainnet-graph documentation master file
+.. BrainNet-fMRI-CodeDocs documentation master file
 
-===========================
-Welcome to brainnet-graph!
-===========================
+Welcome to BrainNet-fMRI-CodeDocs!
+==================================
 
-.. image:: https://img.shields.io/pypi/v/brainnet-graph.svg
-   :target: https://pypi.org/project/brainnet-graph/
-   :alt: PyPI
+This documentation shows how to use the `brainnet-graph` package for constructing and analyzing fMRI-derived brain graphs.
 
-**brainnet-graph** is a lightweight Python package to construct brain connectivity graphs from ROI-level BOLD signal using multiple correlation-based methods.
-
-It supports `.csv`, `.tsv`, `.pkl` inputs and outputs graphs as PyTorch Geometric or CSV edge lists.
-
-::
-
-    pip install brainnet-graph
-
-----
-
-📖 **Sections:**
-
-- :doc:`Installation <install>`
-- :doc:`Usage (CLI & API) <usage>`
-- :doc:`Available Methods <methods>`
-- :doc:`Demo Walkthrough <demo>`
-
-----
+Contents
+--------
 
 .. toctree::
    :maxdepth: 2
-   :caption: Contents
+   :caption: 📘 User Guide
 
    install
    usage
-   methods
    demo
+   methods
 
+.. toctree::
+   :maxdepth: 1
+   :caption: 🧠 Advanced Topics
+
+   visualization
+   performance_notes
+   troubleshooting
+
+.. toctree::
+   :maxdepth: 1
+   :caption: 📚 API / CLI Reference
+
+   cli_reference
+   file_formats
